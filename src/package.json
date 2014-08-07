@@ -1,0 +1,15 @@
+{
+  "name": "NodeJsExpressApp",
+  "version": "0.0.0",
+  "description": "NodeJsExpressApp",
+  "main": "app.js",
+  "author": {
+    "name": "nintexteamio",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*"
+  }
+}
