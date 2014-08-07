@@ -4,13 +4,12 @@
  */
 
 var express = require('express');
+var app = module.exports = express();
 var routes = require('./routes');
 var user = require('./routes/user');
 var value = require('./routes/value');
 var http = require('http');
 var path = require('path');
-
-var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 1337);

@@ -1,4 +1,5 @@
-﻿var http = require('http');
+﻿var app = require('../app');
+var http = require('http');
 
 exports.values = function (req, res) {
     ////res.send("respond with a resource");
