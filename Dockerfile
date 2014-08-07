@@ -5,5 +5,5 @@ MAINTAINER Arthur Ho
 # Build dependencies
 ADD src/ ./src
 RUN cd /src; npm install
-EXPOSE 8080
+EXPOSE 1337
 CMD ["node", "/src/app.js"]
