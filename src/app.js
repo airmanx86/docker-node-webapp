@@ -8,14 +8,16 @@ var app = module.exports = express();
 var routes = require('./routes');
 var user = require('./routes/user');
 var value = require('./routes/value');
+var newbackend = require('./routes/newbackend');
 var http = require('http');
 var path = require('path');
+app.backends = [];
 
 // all environments
 app.set('port', process.env.PORT || 1337);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-app.set('data store hostname', '10.12.8.121');
+app.set('data store hostname', 'localhost');
 app.set('data store port', 8080);
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -34,6 +36,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/values', value.values);
+app.get('/newbackend', newbackend.addNewBackEnd);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
